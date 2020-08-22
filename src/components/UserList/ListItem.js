@@ -2,12 +2,14 @@ import React from 'react';
 
 const ListItem = (props) => {
   const {
-    isSelected,
     onSelect,
+    isSelected,
     user: { id, fName, lName },
   } = props;
 
-  const styles = { bgColor: 'rgba(0,0,0,0.5)' };
+  const styles = {
+    backgroundColor: isSelected ? 'rgba(0,0,0,0.5)' : 'initial',
+  };
   return (
     <li style={styles}>
       <span>
