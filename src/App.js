@@ -4,6 +4,7 @@ import UserList from './components/UserList';
 import SelectedUsers from './components/SelectedUsers';
 import Timer from './components/Timer';
 import Greeting from './components/Greeting';
+import FormLogin from './components/FormLogin';
 
 const dbData = [
   {
@@ -61,8 +62,7 @@ export default App;
 const App = () => {
   return (
     <>
-    <Greeting name={'React'} />
-    <Timer />
+    <FormLogin />
     </>
   );
 };
