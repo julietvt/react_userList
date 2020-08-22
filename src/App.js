@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 //import Greeting from './components/Greeting';
 import UserList from './components/UserList';
 import SelectedUsers from './components/SelectedUsers';
+import Timer from './components/Timer';
+import Greeting from './components/Greeting';
 
 const dbData = [
   {
@@ -31,6 +33,7 @@ const dbData = [
   },
 ];
 
+/*
 class App extends Component {
   constructor(props) {
     super(props);
@@ -53,4 +56,14 @@ class App extends Component {
     );
   }
 }
+export default App;
+*/
+const App = () => {
+  return (
+    <>
+    <Greeting name={'React'} />
+    <Timer />
+    </>
+  );
+};
 export default App;
