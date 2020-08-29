@@ -1,12 +1,17 @@
 import React from 'react';
+import propTypes from 'prop-types';
+import styles from './Day.module.css';
+import { format } from 'date-fns';
 
-function Day(props) {
-  const { dayName, number } = props;
+const Day = ({ currentDate }) => {
   return (
-    <div>
-      <div>{dayName}</div>
-      <div>{number}</div>
+    <div className={styles.wrapper}>
+      <div className={styles.name}>{format(currentDate, 'iiii')}</div>
+      <div className={styles.number}>{format(currentDate, 'd')}</div>
     </div>
   );
-}
+};
+Day.propTypes = {
+  currentDate: propTypes.instanceOf(Date).isRequired,
+};
 export default Day;
