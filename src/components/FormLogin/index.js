@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { render } from '@testing-library/react';
 import styles from './LoginForm.module.css';
+import classnames from 'classnames';
 
 class FormLogin extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class FormLogin extends Component {
     this.state = {
       userEmail: '',
       userPassword: '',
+      isPasswordValid: null,
     };
   }
   handleEmailChange = (event) => {
@@ -30,7 +32,15 @@ class FormLogin extends Component {
   };
 
   render() {
-    const { userEmail, userPassword } = this.state;
+    const { userEmail, userPassword, isPasswordValid } = this.state;
+    const passStyleClass = classnames(styles.input, {
+      [styles.inputValid]: isPasswordValid,
+    });
+    /*
+    const passStyleClass = `${styles.input} ${
+      isPasswordValid && styles.inputValid
+    }`;
+    */
     return (
       <form className={styles.container} onSubmit={this.handleSubmit}>
         <input
@@ -47,7 +57,7 @@ class FormLogin extends Component {
           value={userPassword}
           onChange={this.handlePasswordChange}
           placeholder="user pass"
-          className={styles.input}
+          className={passStyleClass}
         />
         <button type="submit"> LOGIN</button>
       </form>
