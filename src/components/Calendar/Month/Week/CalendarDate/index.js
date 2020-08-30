@@ -8,7 +8,7 @@ const CalendarDate = ({ dayDate, date, currentDate }) => {
   const isCurrent =
     isSameDay(dayDate, currentDate) && isSameMonth(dayDate, currentDate);
   const className = classNames(styles.box, {
-    [styles.currentDate]: isCurrent,
+    [styles.currentDay]: isCurrent,
     [styles.otherMonth]: !isSameMonth(dayDate, date),
   });
   return <li className={className}>{format(dayDate, 'd')}</li>;

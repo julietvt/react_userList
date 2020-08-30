@@ -26,13 +26,13 @@ const Month = (props) => {
     <div className={styles.wrapper}>
       <div className={styles.title}>{format(date, 'LLLL y')}</div>
       <ul className={styles.row}>
-        <li className={styles.dayName}>s</li>
-        <li className={styles.dayName}>m</li>
-        <li className={styles.dayName}>t</li>
-        <li className={styles.dayName}>w</li>
-        <li className={styles.dayName}>t</li>
-        <li className={styles.dayName}>f</li>
-        <li className={styles.dayName}>s</li>
+        <li className={className}>s</li>
+        <li className={className}>m</li>
+        <li className={className}>t</li>
+        <li className={className}>w</li>
+        <li className={className}>t</li>
+        <li className={className}>f</li>
+        <li className={className}>s</li>
       </ul>
       {getWeeks(props)}
     </div>
