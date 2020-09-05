@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Calendar from './components/Calendar';
+import Carousel from './components/Carousel';
+import { slidesCollection } from './components/Carousel/config';
 
 const App = () => {
-  return <Calendar />;
+  return <Carousel width={800} height={400} slides={slidesCollection} />;
 };
 export default App;
