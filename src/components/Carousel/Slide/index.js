@@ -14,9 +14,12 @@ class Slide extends Component {
   }
 
   handleLoad = () => {
+    /*
     this.ListeningStateChangedEvent({
       isLoaded: true,
     });
+    */
+    this.setState({ isLoaded: true });
   };
 
   load = () => {

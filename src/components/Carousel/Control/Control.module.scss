@@ -22,11 +22,17 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  & > * {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    color: gray;
+  }
 }
 
-& > * {
-  display: block;
-  width: 30px;
-  cursor: pointer;
-  color: gray;
+.delay,
+.nextPrev,
+.slideshow {
+  z-index: 1;
 }
