@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import Carousel from './components/Carousel';
-import { slidesCollection } from './components/Carousel/config';
-import UserLoader from './components/UserLoader';
-import Chat from './components/Chat';
-import Timer from './components/FuncTimer';
+import { useState } from 'react';
+import Pagination from './components/UserCard/Pagination';
 
 const App = () => {
-  //return <UserLoader />;
-  //return <Carousel width={800} height={400} slides={slidesCollection} />;
-  //return <Counter step={2} />;
-  //return <Chat />;
-  return <Timer />;
+  const [currentPage, setCurrentPage] = useState(1);
+  return (
+    <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+  );
 };
 export default App;

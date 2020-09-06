@@ -17,7 +17,7 @@ function Timer() {
   return (
     <div>
       <h1>{format(time, 'HH:mm:ss')}</h1>
-      <button onClick={() => void setIsRun(!isRun)}>
+      <button onClick={() => setIsRun(!isRun)}>
         {isRun ? 'stop' : 'start'}
       </button>
       <button
