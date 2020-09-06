@@ -37,7 +37,7 @@ const data = {
   ],
 };
 
-const getDate = () => data;
+const getData = () => data;
 
 function Chat(props) {
   const [state, dispatch] = useReducer(reducer, {
