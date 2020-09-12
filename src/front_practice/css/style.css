@@ -1,0 +1,26 @@
+#userList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.userListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 200px;
+  max-width: 300px;
+  flex-basis: 300px;
+  padding: 20px;
+  color: blue;
+  margin: 20px;
+  background-color: white;
+  border: 2px solid darkblue;
+}
+
+.userPictureCont {
+}
+
+.userPictureCont > img {
+}
