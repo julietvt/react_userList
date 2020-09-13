@@ -31,9 +31,11 @@ createUserImageElem(user){
 
 }
 
-createUserFullnameElem({user,surname}){
-    const userFullnameElem = document.createElement('h2');
+createUserFullnameElem({name,surname}){
+    const userFullnameElem = document.createElement('h3');
     userFullnameElem.classList.add('userFullName');
     userFullnameElem.innerText = `${name} ${surname}`;
     return userFullnameElem;
 }
+
+
